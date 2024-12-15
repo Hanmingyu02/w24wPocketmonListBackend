@@ -8,5 +8,6 @@ data class Pokemon(
     @Id val id: String? = null,
     val number: String,
     val name: String,
-    val explanation: String
+    val explanation: String,
+    val imageSrc: String
 )

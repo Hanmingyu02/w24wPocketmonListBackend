@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/pokemons")
+@CrossOrigin(origins = ["https://wsp2024pokemonfrontend.netlify.app/", "http://localhost:3000"])
 class PokemonController(private val service: PokemonService) {
     @PostMapping
     fun addPokemon(@RequestBody pokemon: Pokemon): Pokemon = service.addPokemon(pokemon)
